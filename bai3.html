@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function isSubstring(st1, st2)
+  {
+    let M = st1.length;
+    let N = st2.length;
+
+    for (let i = 0; i <= N - M; i++) {
+      let j;
+      for (j = 0; j < M; j++)
+        if (st2[i + j] !== st1[j])
+          break;
+      if (j === M)
+        return i;
+    }
+    return -1;
+  }
+  let st1 = "luan";
+  let st2 = "ledinhluan";
+  let res = isSubstring(st1, st2);
+  if (res === -1)
+    document.write( "Not Present");
+  else
+    document.write( "Present at index " + res);
+</script>
+</body>
+</html>

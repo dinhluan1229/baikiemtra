@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+  class Rectangle {
+    x;
+    y;
+    width;
+    height;
+    color;
+
+    constructor(x, y, width,height, color) {
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+      this.color = color;
+    }
+
+    get x() {
+      return this.x;
+    }
+
+    get y() {
+      return this.y;
+    }
+
+    get width() {
+      return this.width;
+    }
+    get height() {
+      return this.height;
+    }
+
+    get color() {
+      return this.color;
+    }
+
+    render() {
+      let ctx = document.getElementById("myCanvas").getContext("2d");
+      ctx.color;
+      ctx.fillStyle = color;
+      ctx.fillRect(x,y,width,height);
+      ctx.fill();
+    }
+  }
+
+  let rectangle = new Rectangle(10, 10, 200, 100);
+  let x = rectangle.x;
+  let y = rectangle.y;
+  let width = rectangle.width;
+  let height = rectangle.height;
+  let color = "#000000";
+  rectangle.render()
+
+</script>
+</body>
+</html>
